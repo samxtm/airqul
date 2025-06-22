@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Air Quality Monitoring System</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Air Quality Monitoring</h1>
+    <input type="text" id="location" placeholder="Enter your location" />
+    
+    <button class="btn" onclick="fetchData()">Get Data</button>
+    
+    <a href="about.html">
+      <button class="btn about-btn">About</button>
+    </a>
+    
+    <div id="error-message" class="error-message"></div>
+
+    <div id="data-container" class="data-container" style="display:none;">
+      <p><strong>Temperature:</strong> <span id="temperature"></span></p>
+      <p id="air-status"><strong>Air Quality Status:</strong> <span id="status-text"></span></p>
+      <canvas id="pollutantChart" width="400" height="400"></canvas>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

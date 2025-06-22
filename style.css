@@ -1,0 +1,160 @@
+/* Full-page background image */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('./images/background.jpg'); /* Change your background image here */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Overlay to slightly darken background for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top:0; left:0; right:0; bottom:0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+/* About page body background */
+body.about-page {
+  background-image: url('./images/about-background.jpg'); /* Change to your about page image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Overlay for darkening background on About page */
+body.about-page::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+/* Container for About page content */
+.about-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px 50px;
+  border-radius: 16px;
+  max-width: 700px;
+  width: 90%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  color: #05445E;
+  text-align: center;
+}
+
+
+
+/* Container styling on top */
+.container {
+  position: relative;
+  z-index: 1;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 90%;
+  max-width: 700px;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  color: #05445E;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Input styling */
+input[type="text"] {
+  width: 80%;
+  max-width: 300px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #b0c4de;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus {
+  border-color: #05445E;
+  box-shadow: 0 0 10px rgba(5, 68, 94, 0.5);
+}
+
+/* Buttons */
+.btn {
+  background-color: #05445E;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px 5px;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+  background-color: #04293A;
+  transform: scale(1.05);
+}
+
+.about-btn {
+  background-color: #198754;
+}
+
+/* Error message */
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Data container */
+.data-container {
+  margin-top: 20px;
+  text-align: left;
+  font-size: 16px;
+  color: #05445E;
+}
+
+/* Air Quality Status label styling */
+#status-text {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 5px;
+}
+
+.status-excellent { background-color: #28a745; }
+.status-good { background-color: #60c657; }
+.status-moderate { background-color: #ffc107; color: black; }
+.status-unhealthy-sensitive { background-color: #fd7e14; }
+.status-unhealthy { background-color: #dc3545; }
+.status-hazardous { background-color: #6f42c1; }
+
+/* Responsive canvas */
+canvas {
+  max-width: 100%;
+  margin-top: 20px;
+}
